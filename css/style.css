@@ -1,0 +1,68 @@
+body{
+	padding : 0;
+	margin : 0;
+	font-family : arial;
+}
+section {
+	display : block;
+}
+
+.sep{
+	background-color: #BBDEFB !important;
+}
+.submit{
+	background-color: #1565C0 !important;
+	color : white !important;
+}
+
+.wrapper{
+	max-width: 600px;
+	max-height: 500px;
+	height : 100%;
+	margin : 0 auto;
+	text-align : center;
+	border : lightgrey 1px solid;
+	padding :4% 2% 2% 2%;
+}
+
+#display{
+	background-color: #0D47A1;
+	height : 70px;
+	width: 98%;
+	padding:0 1%;
+	border : lightgrey 1px solid;
+	font-weight : bold;
+	font-size : 20px;
+	color: #E3F2FD;
+	text-align : right;
+	border : none;
+}
+
+#keypad{
+	padding-top : 6%;
+}
+
+#keypad input{
+
+	float : left;
+	width : 23%; 
+	height : auto;
+	box-sizing : border-box; 
+	padding: 3% 0px;
+	margin: 1%;
+	background-color: #f8f8f8; 
+	border: #BBDEFB 1px solid;
+	text-align : center;
+	color: #1565C0;
+	font-size: 18px;
+	cursor : pointer;
+}
+
+#keypad input:hover{
+	border: #64B5F6 1px solid;
+}
+.clear{
+	clear : both;
+	visibility : hidden;
+	display : block;
+}

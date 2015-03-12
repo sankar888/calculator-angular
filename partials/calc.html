@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/style.css">
+		<!--<script src="../js/calculator.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>	
+		<script src="../js/app.js"></script>
+		<script src="../js/controller.js"></script>
+		<script src="../js/factory.js"></script>	
+	</head>
+	<body ng-app="calculator">
+		<div class="wrapper" ng-controller="CalculatorController as cc">
+			<section class="display">
+				<input id="display" type="text" value="" disabled ng-model="cc.validator.arrToString(cc.expression)">
+			</section>
+			<section id="keypad">		
+				<input type = "button" class="sep key" value="(" ng-click="cc.processInput('(')">
+				<input type = "button" class="sep key" value=")" ng-click="cc.processInput(')')">
+				<input type = "button" class="sep key" value="^" ng-click="cc.processInput('^')">
+				<input type = "button" id="del" class="sep" value="C" ng-click="cc.del()">
+
+				<input type = "button" class="key" value="7" ng-click="cc.processInput('7')">
+				<input type = "button" class="key" value="8" ng-click="cc.processInput('8')">
+				<input type = "button" class="key" value="9" ng-click="cc.processInput('9')">
+				<input type = "button" class="sep key" value="/" ng-click="cc.processInput('/')">
+
+				<input type = "button" class="key" value="4" ng-click="cc.processInput('4')">
+				<input type = "button" class="key" value="5" ng-click="cc.processInput('5')">
+				<input type = "button" class="key" value="6" ng-click="cc.processInput('6')">
+				<input type = "button" class="sep key" value="*" ng-click="cc.processInput('*')">
+
+				<input type = "button" class="key" value="1" ng-click="cc.processInput('1')">
+				<input type = "button" class="key" value="2" ng-click="cc.processInput('2')">
+				<input type = "button" class="key" value="3" ng-click="cc.processInput('3')">
+				<input type = "button" class="sep key" value="-" ng-click="cc.processInput('-')">
+
+				<input type = "button" class="key" value="0" ng-click="cc.processInput('0')">
+				<input type = "button" class="key" value="." ng-click="cc.processInput('.')">
+				<input type = "button" id="submit" class="submit" value="=" ng-click="cc.processExpression()">
+				<input type = "button" class="sep key" value="+" ng-click="cc.processInput('+')">
+
+				<span class="clear"></span>	
+			</section>
+		</div>
+	</body>
+</html>
