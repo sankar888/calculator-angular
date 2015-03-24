@@ -1,3 +1,8 @@
-<div class="wrapper" ng-controller="CalculatorController">
-	<div ng-include = "DisplayView.html"></div>	
+<div class="wrapper" ng-controller="CalculatorController as cc">
+	<div ng-include = "'view/DisplayView.html'"></div>
+	<section class="keys-wrapper">
+		<div ng-include ="'view/NumberKeysView.html'"></div>
+		<div ng-include="'view/OperatorKeysView.html'"></div>
+		<span class="clear"></span>
+	</section>
 </div>

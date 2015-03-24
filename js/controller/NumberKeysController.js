@@ -1,8 +1,8 @@
-calc.controller('NumberKeysController', ['NumberKeysModel','CalculatorController', function(nm, cc){
+calc.controller('NumberKeysController', ['$scope', 'NumberKeysModel', function($scope, nm){
 
 	this.model = nm;
 
 	this.numberKeyedIn = function(key){
-		cc.numberKeyedIn(key);
+		$scope.$emit('numberKeyedIn',key);
 	}
 }]);

@@ -1,5 +1,5 @@
 calc.value('CalculatorModel', {
 	
-	expression : ['q'],
+	expression : [],
 	result : ''
 });

@@ -1,17 +1,17 @@
-calc.controller('OperatorKeysController', ['OperatorKeysModel','CalculatorController', function(om, cc){
+calc.controller('OperatorKeysController', ['$scope','OperatorKeysModel', function($scope, om){
 
 	this.model = om;
 
 	this.keyedIn = function(key){
 		switch (key){
 
-			case '=' : 	cc.submitKeyedIn();
+			case '=' : 	$scope.$emit('submitKeyedIn');
 					 	break;
 					 	
-			case 'C' : 	cc.deleteKeyedIn();
+			case 'C' : 	$scope.$emit('deleteKeyedIn');
 						break;
 
-			default :   cc.operatorKeyedIn(key);
+			default :   $scope.$emit('operatorKeyedIn', key);
 						break;
 		}
 	}

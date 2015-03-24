@@ -1,25 +1,10 @@
-calc.controller('DisplayController', function(){
+calc.controller('DisplayController',['$scope','DisplayModel', function($scope, dm){
 
-	this.model = {value : 'hai'};
+	this.model = dm;
 
-	this.show = function(key){
+	var show = function(event,key){
 		this.model.value = key;
-	},
+	}.bind(this);
+	$scope.$on('display',show);
 
-	this.clear = function(){
-		this.model.value = '';
-	},
-
-	this.append = function(key){
-		this.model.value += key;
-	},
-
-	this.clearLast = function(){
-		var val = this.model.value;
-		if(val.length > 0){
-			val = val.substring(0,val.length-1);
-		}
-		this.show(val);
-	}
-
-});
+}]);
