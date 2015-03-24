@@ -1,1 +1,1 @@
-var calc = angular.module('calculator', []);
+var calc = angular.module('calculator',[]);
